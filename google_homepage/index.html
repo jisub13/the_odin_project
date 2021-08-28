@@ -19,12 +19,11 @@
             header
             {
                 padding: 6px;
-                display: flex;
-                align-items: center;
             }
             .nav_links
             {
-                display: flex;
+                display: inline-block;
+                vertical-align: middle;
             }
             #dot_menu
             {
@@ -32,18 +31,22 @@
                 height: 24px;
                 fill: #5f6368;
             }
+            .left_header
+            {
+                float: right;
+            }
         </style>
         <header>
             <div class="nav_links" id="home_links">
                 <a href="https://about.google/?fg=1&utm_source=google-AU&utm_medium=referral&utm_campaign=hp-header">About</a>
                 <a href="https://store.google.com/AU?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-AU">Store</a>
             </div>
-            <div class="left-header">
-                <div id="user_links">
+            <div class="nav_links left_header">
+                <div class="nav_links" id="user_links">
                     <a href="https://mail.google.com/mail/?authuser=0&ogbl">Gmail</a>
                     <a href="https://www.google.com.au/imghp?hl=en&authuser=0&ogbl">Images</a>
                 </div>
-                <div id="dot_menu">
+                <div class="nav_links" id="dot_menu">
                     <!--the viewbox is essentially just the scaling of the image. The larger
                         the last 2 values the smaller the image, the smaller the last 2 values
                         the larger the image comparative to the parent div. The first 2 values
@@ -62,7 +65,7 @@
                         </path>
                     </svg>
                 </div>
-                <img src="images/google_profile.png" alt="google profile pic">
+                <img class="nav_links" src="images/google_profile.png" alt="google profile pic">
             </div>
         </header>
         <div class="main_logo">
