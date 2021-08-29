@@ -16,6 +16,18 @@
     </head>
     <body>
         <style>
+            body, html
+            {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                font-family: Arial, Sans-Serif;
+            }
+            a
+            {
+                text-decoration: none;
+                color: #222222;
+            }
             header
             {
                 padding: 6px;
@@ -79,10 +91,19 @@
             {
                 width: 100%;
             }
+            .space_fill
+            {
+                /*flex grow is only used if the parent's display if flex*/
+                flex-grow: 1;
+            }
+            #about
+            {
+                margin: 0px 5px 0px 15px;
+            }
         </style>
         <header>
             <div class="nav_links" id="home_links">
-                <a href="https://about.google/?fg=1&utm_source=google-AU&utm_medium=referral&utm_campaign=hp-header">About</a>
+                <a id="about" href="https://about.google/?fg=1&utm_source=google-AU&utm_medium=referral&utm_campaign=hp-header">About</a>
                 <a href="https://store.google.com/AU?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-AU">Store</a>
             </div>
             <div class="nav_links move_right">
@@ -115,16 +136,19 @@
             <div id="main_logo">
                 <img id="google_logo" src="images/google_homepage.png" alt="Google homepage logo">
             </div>
-            <div id="search_bar">
-                <div id="magnifying_search">
-                    <svg focusable="false" viewbox="0 0 24 24">
-                        <path d="
-                            M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 
-                            0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 
-                            19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01
-                            14 9.5 11.99 14 9.5 14z">
-                        </path>
-                    </svg>
+            <!--Div makes sure the search bar doesn't get squished-->
+            <div>
+                <div id="search_bar">
+                    <div id="magnifying_search">
+                        <svg focusable="false" viewbox="0 0 24 24">
+                            <path d="
+                                M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 
+                                0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 
+                                19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01
+                                14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+                    </div>
                 </div>
             </div>
             <div class="search_options">
