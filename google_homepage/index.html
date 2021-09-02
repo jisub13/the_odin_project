@@ -55,6 +55,8 @@
             }
             #main_logo
             {
+                min-height: 150px;
+                max-height: 290px;
                 min-width: 150px;
                 display: flex;
                 align-items: center;
@@ -79,10 +81,6 @@
                 padding-left: 14px;
                 fill: #9aa0a6;
             }
-            .search_options
-            {
-                text-align: center;
-            }
             .page_bottom
             {
                 padding: 6px;
@@ -99,6 +97,49 @@
             #about
             {
                 margin: 0px 5px 0px 15px;
+            }
+            /* this is like specifying the anchor tags
+            to be effective till the anchor and div descendent
+            of static footer*/
+            .static_footer .page_end a, .static_footer div
+            {
+               color: rgba(0,0,0,.54);
+               background: #f2f2f2;
+            }
+            #region
+            {
+                padding: 15px 30px;
+                font-size: 15px;
+                border-bottom: 1px solid #dadce0;
+            }
+            .page_end a
+            {
+                padding: 15px;
+                font-size: 14px;
+            }
+            .page_end
+            {
+                padding: 0px 20px;
+            }
+            .search_options
+            {
+                height: 70px;
+                padding-top: 18px;
+            }
+            .search_links
+            {
+                display: inline-block;
+                font-size: 14px;
+                background: #f8f9fa;
+                border: 1px #f8f9fa;
+                border-radius: 4px;
+                min-width: 54px;
+                padding: 11px 16px;
+                margin: 11px;
+            }
+            center
+            {
+                margin: 10px;
             }
         </style>
         <header>
@@ -137,7 +178,7 @@
                 <img id="google_logo" src="images/google_homepage.png" alt="Google homepage logo">
             </div>
             <!--Div makes sure the search bar doesn't get squished-->
-            <div>
+            <div id="spacer">
                 <div id="search_bar">
                     <div id="magnifying_search">
                         <svg focusable="false" viewbox="0 0 24 24">
@@ -151,17 +192,16 @@
                     </div>
                 </div>
             </div>
-            <div class="search_options">
-                <a href="#">Google Search</a>
-                <a href="https://www.google.com/doodles">I'm Feeling Lucky</a>
-            </div>
-        <div class="space_fill">
-        </div>
+            <center class="search_options">
+                <a class="search_links" href="#">Google Search</a>
+                <a class="search_links" href="https://www.google.com/doodles">I'm Feeling Lucky</a>
+            </center>
+        <div class="space_fill"></div>
         <div class="static_footer">
             <div id="region">
                 Australia
             </div>
-            <div class="nav_links">
+            <div class="page_end nav_links">
                 <a href="https://ads.google.com/intl/en_au/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2m--ahpm-0000000087-0000000000&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>    
                 <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Business</a>  
                 <a id="no_wrap" href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a> 
